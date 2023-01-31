@@ -1,6 +1,6 @@
 
 public class FilmsManager {
-    private String[] films = new String[0];              // Массив с фильмами
+    private String[] films = new String[0];
     private int limit;
 
     public FilmsManager() {
@@ -11,17 +11,17 @@ public class FilmsManager {
         this.limit = limit;
     }
 
-    public void addFilm(String film) {                   //Добавление фильма в массив
-        String[] tmp = new String[films.length + 1];      // Создаем временный массив с длинной +1
+    public void addFilm(String film) {
+        String[] tmp = new String[films.length + 1];
         for (int i = 0; i < films.length; i++) {
-            tmp[i] = films[i];                            // В каждый номер массива tmp передаем значение того же номера массива films
+            tmp[i] = films[i];
         }
-        tmp[tmp.length - 1] = film;                       // Присваиваем переданный параметр в массив tmp и уменьшаем на 1, т.к он больше на 1
-        films = tmp;                                       // Присваиваем значения из массива tmp в массив films
+        tmp[tmp.length - 1] = film;
+        films = tmp;
     }
 
     public String[] findAll() {
-        return films;                                       // Возвращаем все фильмы имеющиеся в массиве films
+        return films;
     }
 
     public String[] findLast() {
